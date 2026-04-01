@@ -1,0 +1,71 @@
+.footer-root {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 50;
+  background: linear-gradient(
+    0deg,
+    rgba(4, 8, 26, 0.95) 0%,
+    rgba(6, 14, 36, 0.75) 100%
+  );
+  backdrop-filter: blur(20px) saturate(1.4);
+  -webkit-backdrop-filter: blur(20px) saturate(1.4);
+  border-top: 1px solid rgba(80, 180, 255, 0.18);
+  box-shadow:
+    0 -4px 32px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(80, 180, 255, 0.1);
+  /* 高さをビューポート基準で */
+  height: clamp(64px, 13vh, 110px);
+  display: flex;
+  align-items: center;
+}
+.footer-list {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+.footer-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 0;
+}
+.footer-icon-wrap {
+  transition: filter 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-icon-wrap img {
+  height: clamp(28px, 5.5vh, 60px);
+  width: auto;
+}
+.footer-label {
+  font-size: clamp(9px, 1.4vh, 14px);
+  font-weight: 600;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-top: clamp(2px, 0.4vh, 5px);
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+  transition: background-image 0.3s;
+}
+.footer-line {
+  width: 100%;
+  height: 1.5px;
+  transition:
+    opacity 0.3s,
+    box-shadow 0.3s;
+}
+.footer-line-top {
+  margin-top: clamp(2px, 0.5vh, 6px);
+}
+.footer-line-bottom {
+  margin-top: 0;
+}

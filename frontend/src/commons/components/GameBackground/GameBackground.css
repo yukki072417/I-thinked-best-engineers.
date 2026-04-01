@@ -1,0 +1,45 @@
+/* ノッチ・ホームバー対応のビューポート設定 */
+:root {
+  --sat: env(safe-area-inset-top, 0px);
+  --sar: env(safe-area-inset-right, 0px);
+  --sab: env(safe-area-inset-bottom, 0px);
+  --sal: env(safe-area-inset-left, 0px);
+}
+
+/* スクロールバー非表示 */
+html,
+body {
+  overflow: hidden;
+  overscroll-behavior: none;
+  /* dvh: スマホのブラウザUI伸縮を考慮した動的ビューポート */
+  height: 100dvh;
+  width: 100dvw;
+}
+
+#root {
+  height: 100dvh;
+  width: 100dvw;
+  overflow: hidden;
+}
+
+/* セーフエリア用ユーティリティ */
+.safe-top {
+  padding-top: var(--sat);
+}
+.safe-right {
+  padding-right: var(--sar);
+}
+.safe-bottom {
+  padding-bottom: var(--sab);
+}
+.safe-left {
+  padding-left: var(--sal);
+}
+.safe-x {
+  padding-left: var(--sal);
+  padding-right: var(--sar);
+}
+.safe-y {
+  padding-top: var(--sat);
+  padding-bottom: var(--sab);
+}

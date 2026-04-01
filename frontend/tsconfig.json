@@ -1,0 +1,16 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ],
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "@/icons": ["./src/assets/icons/index"],
+      "@/icons/*": ["./src/assets/icons/*"],
+      "@/commons/*": ["./src/commons/*"]
+    }
+  }
+}

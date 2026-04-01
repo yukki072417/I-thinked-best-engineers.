@@ -1,0 +1,13 @@
+@keyframes clicking {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.95);
+  }
+}
+
+.clickable-button:active {
+  animation: clicking 0.1s ease-in-out;
+  opacity: 0.75;
+}
